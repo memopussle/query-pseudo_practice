@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JQUERY - DOM</title>
+</head>
+<body>
+    <p id="special">Hello World!</p>
+
+    <!--when user click button, the onclick event fires and executes the changeContent-->
+     <button onclick="changeContent()">Click me</button>
+    <h1>Hello, I'm Thu</h1>
+    <h1>I'm 22.</h1>
+    <h1>Nice to meet you!</h1>
+    <ol>
+        <li class="list-item">item 1</li>
+        <li  class="list-item">item 2</li>
+        <li class="list-item">item 3</li>
+         <li class="list-item">item 4</li>
+    </  <div>
+        <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nostrum quis accusantium sit reiciendis, fugiat labore modi ratione aspernatur. Rerum!</p>
+        <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, ratione.</p>
+        <p id="paragraph">Lorem ipsum dolor sit amet.</p>
+    </div>
+    
+    <ul>
+
+        <li id="A"><!-- first-child -->
+
+            <h3>Title 1</h3><!-- first-child -->
+
+            <ul><!-- last-child -->
+                <li>1</li><!-- first-child, nth-child(1) -->
+                <li>2</li><!-- nth-child(2) -->
+                <li>3</li><!-- last-child, nth-child(3) -->
+            </ul>
+
+        </li>
+
+        <li id="B"><!-- last-child -->
+
+            <h3>Title 2</h3><!-- first-child -->
+
+            <ul><!-- last-child -->
+
+                <li>4</li><!-- first-child, nth-child(1) -->
+                <li>5</li><!-- nth-child(2) -->
+                <li>6</li><!-- last-child, nth-child(3) -->
+
+            </ul>
+
+        </li>
+
+   </ul>
+
+   <div>
+       <ul>
+           <li>1</li>
+           <li>2</li>
+           <li>3</li>
+           <li>4</li>
+           <li>5</li>
+           <li>6</li>
+           <li>7</li>
+           <li>8</li>
+           <li>9</li>
+           <li>10</li>
+       </ul>
+   </div>
+    <script src="app.js"></script>
+</body>
+</html>
