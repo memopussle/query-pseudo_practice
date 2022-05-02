@@ -70,6 +70,48 @@
            <li>10</li>
        </ul>
    </div>
-    <script src="app.js"></script>
+
+    <div class="remove-child">
+      <p class="note" id="note1">Note 1</p>
+      <p class="green note" id="note2">Note 2</p>
+       <p class="green note" id="note3">Note 3</p>
+    </div>
+    <button onClick="removeNote2()">
+      remove note2
+    </button>
+
+    <!--append note 2-->
+    <button onClick="appendNote2()">
+        append note2
+    </button>
+     <!--append note 1-->
+    <button onClick="appendNote1()">
+       append note1
+    </button>      
+    <!--insert note 2 before note 1-->
+    <button onClick="insertNote2BeforeNote1()">
+        insert note2 before note1
+    </button> 
+    <!--prepend note 2-->
+    <button onClick="prependNote2()">
+        prepend note2
+    </button>
+    <!--replace note 3 with note 2-->
+    <button onClick="replaceNote3WithNote2()">
+       replace note3
+    </button>
+
+    <button onClick="appendNote3()">
+       append note3
+    </button>
+
+    <div id="container"></div>
+    <button onClick="addTextNode()">
+        add Text node
+    </button>
+    <button onClick="addNewParagraph()">add new paragraph</button>
+    <script src="app.js">
+
+    </script>
 </body>
 </html>
