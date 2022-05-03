@@ -110,3 +110,19 @@ ul > li:nth-child(1) {
 ul > li:nth-child(n) {
   Selects every li element, same as an li selector 
 }  */
+
+.green {
+   color: green;
+}
+
+#bold {
+   font-weight: bold;
+}
+
+.hidden {
+   display: none;
+}
+
+.blue {
+   color: blue;
+}

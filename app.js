@@ -1,3 +1,6 @@
+/////////////////////DOM MANUPILATION/////////////
+
+
 /////////////////CHANGE CONTENTBY TARGETING ID CLASS
 // var changeContent = function () {
 //   document.getElementById("special").innerHTML = "I was changed by JavaScript!";
@@ -136,4 +139,103 @@ var addNewParagraph = function() {
   newP.appendChild(newTextNode);
   //append newP after container
   document.getElementById('container').appendChild(newP);
+}
+
+
+//////////////////////innerHTML////////////////
+// create or edit the child elements of a node without using the methods as demonstrated above
+//however due to security conterns , it is recommended to be avoided. 
+//attackers can steal people's secret information
+var setContent = function() {
+  var html =
+    "<p>Hello world!</p>" + "<p>Hello world!</p>" + "<p>Hello world!</p>";
+    document.getElementById('container').innerHTML = html;
+}
+
+
+
+////////////////////className & id///////////////////
+//set class of an element through className property
+var makeGreen = function() {
+  var paragraph = document.getElementsByClassName('intro')[0];
+  
+  //add class name
+  paragraph.className ='green';
+}
+
+var makeBold = function() {
+  var paragraph = document.getElementsByClassName('intro')[0];
+  paragraph.id = 'bold';
+}
+
+////////classList method: add,remove, toggle, contains, replace/////////
+var toggleGreen = function () {
+  var paragraph = document.getElementsByClassName("intro")[0];
+  paragraph.classList.toggle("green");
+};
+
+
+////////Toggling an Element to Show/////////
+var show = function(index) {
+  var paragraphs = document.getElementById('paragraphs').children;
+ //loop thru paragrphs
+  for (var i =0; i < paragraphs.length; i++) {
+    //toggle.hidden class if index !==i
+    paragraphs[i].classList.toggle('hidden', index !==i);
+  }
+}
+
+
+
+/////////.children & .childNodes///////////
+//.childrenreturns a list ofimmediate nodes contained in a ParentNode.
+//.children:element nodes, childNodes: node types
+
+document.querySelector("div").childNodes.length;
+document.querySelector("div").children.length;
+
+
+//////////////////getAttribute, setAttribute, removeAttribute////////////
+//setAttribute : attribute name, value you want to set 
+paragraph.setAttribute("class", "green");
+paragraph.getAttribute("class"); //-> green
+paragraph.removeAttribute("class");
+
+//it is recommended to use prefixing data- => prevent conflict with HTML attributes
+var makeParagraphsBlue = function() {
+  paragraphs = document.getElementById('paragraphs2').children;
+  for( var i = 0; i < paragraphs.length; i++) {
+     var paragraph = paragraphs[i];
+    if (paragraph.getAttribute('data-color') === 'blue') {
+      paragraph.classList.add('blue');
+  }
+}
+}
+
+
+////////////Element.style/////////////////
+//define in-line styles of an elemen
+var styleObject = document.getElementsByTagName('p')[0].style;
+console.log(styleObject); //-> CSSStyleDeclaration
+
+//log css Text
+console.log(styleObject.cssText);
+
+
+///////////////style.csstext / Element.Attribute////////////
+// These two methods will overwrite entire style value, recommended only for setting multiple CSS properties at one.
+var p = document.getElementById("paragraphs2");
+p.style.cssText = 'color: red; font-size: 20px;';
+p.setAttribute("style", "color: green; font-size: 30px;");
+
+
+////////////style elements///////////
+//replicate <style></style> in HTML file 
+var addCSSNode = function() {
+  //create <style></style>
+  var styleNode = document.createElement("style");
+   //style p in style sheet
+  styleNode.innerHTML = "#paragraph1 {color: red; font-weight: bold;}";
+ //locate style sheet in head
+  document.getElementsByTagName("head")[0].appendChild(styleNode);
 }

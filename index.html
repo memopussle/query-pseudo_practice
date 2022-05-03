@@ -20,7 +20,7 @@
         <li  class="list-item">item 2</li>
         <li class="list-item">item 3</li>
          <li class="list-item">item 4</li>
-    </  <div>
+    <div>
         <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nostrum quis accusantium sit reiciendis, fugiat labore modi ratione aspernatur. Rerum!</p>
         <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, ratione.</p>
         <p id="paragraph">Lorem ipsum dolor sit amet.</p>
@@ -110,7 +110,44 @@
         add Text node
     </button>
     <button onClick="addNewParagraph()">add new paragraph</button>
-    <script src="app.js">
+    <button onClick = "setContent()">set content</button>
+   
+    <p class="intro">Hello My Name is Pussle!</p>
+    <button onClick="makeGreen()"> Make Green</button>
+    <button onClick ="makeBold()">Make Bold</button>
+   <button onclick="toggleGreen()">Toggle Green</button>
+   <div id="paragraphs">
+       <p class="hidden">paragraph 1</p>
+       <p class="hidden">paragraph 2</p>
+       <p class="hidden">paragraph 3</p>
+   </div>
+    <button onClick="show(0)">
+    Show 1
+    </button>
+
+    <button onClick="show(1)">
+    Show 2
+    </button>
+
+    <button onClick="show(2)">
+    Show 3
+    </button>
+   
+    <div id="paragraphs2">
+        <p>hello world</p>
+        <p data-color="blue">hello world</p>
+        <p>hello world</p>
+        <p data-color="blue">hello world</p>
+    </div>
+    <button onClick="makeParagraphsBlue()">
+    Make Paragraphs Blue
+    </button>
+
+    <p id="paragraph1">
+    red and bold.
+   </p>
+   <button onClick="addCSSNode()">change color</button>
+   <script src="app.js">
 
     </script>
 </body>
